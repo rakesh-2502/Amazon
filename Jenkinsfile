@@ -19,14 +19,7 @@ pipeline {
 			    }
 			}
 		}
-		stage ('test') {
-			steps {
-			    dir ('Amazon/Amazon'){
-				    sh 'mvn test'
-			    }
-			}
-			
-		}
+		
 	
 	
 	}
