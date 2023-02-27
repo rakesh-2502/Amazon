@@ -43,12 +43,6 @@ pipeline {
 			        }
 			    }
 			}    
-		stage ('tomcat') {
-			    steps {
-			        dir ('/opt/tomcat/bin') {
-			        sh 'sh startup.sh'
-			        }
-			    }
-			}    
+		/opt/tomcat/bin/startup.sh
 	}
 }
