@@ -39,7 +39,7 @@ pipeline {
 		stage ('run') {
 			    steps {
 			        dir ('Amazon/Amazon/Amazon-Web') {
-			        sh 'sudo cp target/*.war /home/raki/tomcat/apache-tomcat-9.0.71/webapps'
+			        sh 'sudo cp target/*.war /opt/tomcat/webapps'
 			        }
 			    }
 			}    
