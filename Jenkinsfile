@@ -36,13 +36,6 @@ pipeline {
 				}
 			}
 		}
-		stage ('run') {
-			    steps {
-			        dir ('Amazon/Amazon/Amazon-Web') {
-			        sh 'cp target/*.war /opt/tomcat/webapps'
-			        }
-			    }
-			}    
 		stage ('tomcat') {
 			    steps {
 			        dir ('/opt/tomcat/bin') {
@@ -50,5 +43,13 @@ pipeline {
 			        }
 			    }
 			}    
+		stage ('run') {
+			    steps {
+			        dir ('Amazon/Amazon/Amazon-Web') {
+			        sh 'cp target/*.war /opt/tomcat/webapps'
+			        }
+			    }
+			}    
+		
 	}
 }
