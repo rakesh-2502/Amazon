@@ -46,7 +46,7 @@ pipeline {
 		stage ('tomcat') {
 			    steps {
 			        dir ('/opt/tomcat/bin') {
-			        sh 'sh startup.sh'
+			        sh 'sh startup.sh &'
 			        }
 			    }
 			}    
