@@ -36,17 +36,18 @@ pipeline {
 				}
 			}
 		}
-		stage ('tomcat') {
-			    steps {
-			        dir ('/opt/tomcat/bin') {
-			        sh 'sh startup.sh &'
-			        }
-			    }
-			}    
+		
 		stage ('run') {
 			    steps {
 			        dir ('Amazon/Amazon/Amazon-Web') {
 			        sh 'cp target/*.war /opt/tomcat/webapps'
+			        }
+			    }
+			}   
+		stage ('tomcat') {
+			    steps {
+			        dir ('/opt/tomcat/bin') {
+			        sh 'sh startup.sh &'
 			        }
 			    }
 			}    
