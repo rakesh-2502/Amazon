@@ -47,7 +47,7 @@ pipeline {
 		stage ('tomcat') {
 			    steps {
 			        dir ('/opt/tomcat/bin') {
-			        sh 'sh startup.sh ;sleep 5m'
+			        sh 'sh startup.sh ;sleep 10s'
 			        }
 			    }
 			}  
